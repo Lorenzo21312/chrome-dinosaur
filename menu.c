@@ -11,7 +11,7 @@
 void startMenu() {
 	struct user firstUser;
 	int highScore;
-    // Read high score
+    // Read high score.
 	FILE *highScoreFile;
 	highScoreFile = fopen("./highScore.txt", "r");
 	fscanf(highScoreFile, "%d", &highScore);
