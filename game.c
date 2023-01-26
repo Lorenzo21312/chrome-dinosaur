@@ -9,6 +9,13 @@
 #include "minunit.h"
 
 // Check if the game is going to be finished in this turn of loop
+
+/**
+	\fn int checkGame(int y, int x, int diY, int diX)
+	\brief Questa funzione controlla se il gioco è terminato
+	\return 
+	
+*/
 int checkGame(int y, int x, int diY, int diX) {
 	if (diY == y) {
 		if (abs((diX+14)-x) <= 4) {
@@ -19,6 +26,13 @@ int checkGame(int y, int x, int diY, int diX) {
 }
 
 // Make game faster
+
+/**
+	\fn int computeTime(int delayTime) 
+	\brief Questa funzione fa aumentare la velocità del gioco
+	\param int delayTime: velocità del gioco
+	\return int: la velocità con cui va riprodotto il gioco
+*/
 int computeTime(int delayTime) {
 	if (delayTime >= 250000) {
 		delayTime -= 1000;
@@ -33,6 +47,15 @@ int computeTime(int delayTime) {
 }
 
 // Which dinosaur should be printed
+
+/**
+	\fn void showdinosaur(int diY, int diX)
+	\brief Questa funzione serve a far vedere le due prospettive del dinosauro
+	\param int diY: Posizione sull asse y
+	\param int diX: Posizione sull asse x
+	\return void: La funzione continua in loop facendo sembrare che il dinosauro si muova
+*/
+
 void showdinosaur(int diY, int diX) {
 	static int counter = 0;
 	if (counter == 0) {
@@ -46,6 +69,15 @@ void showdinosaur(int diY, int diX) {
 }
 
 // Give user the prize
+
+/**
+	\fn int computePrize(int score, int usedPrize)
+	\brief Questa funzione serve per dare il "prize" all'utente
+	\param int score: Punteggio attuale
+	\param int usedPrize: Volte in cui è stato utilizzato il prize
+	\return int: Fa ritornare il prize a 1 oppure lo fa tornare a 0 
+*/
+
 int computePrize(int score, int usedPrize) {
 	if (score >= 20 && score <= 40 && usedPrize == 0) {
 		return 1;
@@ -60,6 +92,17 @@ int computePrize(int score, int usedPrize) {
 }
 
 // The main engine!
+
+
+
+/**
+	\fn void startEngine(int highScore, struct user firstUser)
+	\brief Questa funzione serve per far funzionare il gioco
+	\param int highScore: Punteggio massimo raggiunto dall'utente
+	\param struct user firstUser: Dati inseriti dall'utente nel menu
+	\return void: Esegue il programma in loop fino a quando la funzione "checkGame" non restituisce 0
+*/
+
 void startEngine(int highScore, struct user firstUser) {
     srand(time(NULL));
 	int x, y, diX=5, prize=0, usedPrize=0, score=0, delayTime = 300000
