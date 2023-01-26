@@ -13,7 +13,11 @@
 /**
 	\fn int checkGame(int y, int x, int diY, int diX)
 	\brief Questa funzione controlla se il gioco è terminato
-	\return 
+	\param int y: Posizione sull'asse y del cactus
+	\param int x: Posizione sull'asse x del cactus
+	\param int diY: Posizione sull'asse y del dinosauro
+	\param int diX: Posizione sull'asse x del dinosauro
+	\return int: Fa tornare o 1 se il gioco non è terminato oppure 0 se il gioco è terminato
 	
 */
 int checkGame(int y, int x, int diY, int diX) {
