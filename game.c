@@ -227,22 +227,47 @@ int tests_run = 0;
 int tests_passed = 0;
 
 // sample test function 1
+
+/**
+	\fn static char * test_foo()
+	\brief Questa funzione serve per far eseguire dei test
+*/
+
 static char * test_foo() {
     mu_assert("error, foo != 7", foo == 7);
 }
 
 // sample test function 2
+
+/**
+	\fn static char * test_bar()
+	\brief Questa funzione serve per far eseguire dei test
+*/
+
 static char * test_bar() {
     mu_assert("error, bar != 5", bar == 5);
 }
 
 // put all tests here
+
+/**
+	\fn void all_tests()
+	\brief Questa funzione serve per far eseguire dei test
+*/
+
 void all_tests() {
 	mu_run_test(test_foo);
 	mu_run_test(test_bar);
 }
 
 // call this to run all tests
+
+/**
+	\fn int run_all_tests(int argc, char **argv)
+	\brief Questa funzione serve per far eseguire dei test
+	\return int: Restituisce il valore di test eseguiti ed il valore dei test passati
+*/
+
 int run_all_tests(int argc, char **argv) {
 	if(argc<2 || strcmp(argv[1],"-test")!=0) {
 		return -1;
