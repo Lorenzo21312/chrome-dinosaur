@@ -1,3 +1,12 @@
+
+/** 
+	\file menu.c
+	\author Farbod Ahmadian
+	\version 1.0
+	\date 2023-02-31
+*/
+
+
 #include <ncurses.h>
 #include <unistd.h>
 #include <time.h>
@@ -10,7 +19,7 @@
 /**
 		\fn void startMenu()
 		\brief Questa funzione contiene i parametri nei quali l'utente inserirà i dati.
-		\return void: La funzione viene eseguita in loop quando viene chiamata
+		\return void: La funzione viene eseguita in loop quando viene chiamata (no return)
 */
 
 void startMenu() {
@@ -49,7 +58,7 @@ void startMenu() {
 		\param int diY: conterrà la posizione del dinosaurio sull'asse Y.
 		\param int diX: conterrà la posizione del dinosaurio sull'asse X.
 		\param struct user firstUser: è la struttura nella quale ci sono i dati dell'utente.
-		\return void: La funzione viene eseguita in loop quando viene chiamata
+		\return void: La funzione viene eseguita in loop quando viene chiamata (no return)
 */
 
 void endGame(int score, int highScore, int diY, int diX, struct user firstUser) {
