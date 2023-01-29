@@ -1,3 +1,11 @@
+
+/** 
+	\file game.c
+	\author Farbod Ahmadian
+	\version 1.0
+	\date 2023-02-31
+*/
+
 #include <ncurses.h>
 #include <unistd.h>
 #include <time.h>
@@ -57,7 +65,7 @@ int computeTime(int delayTime) {
 	\brief Questa funzione serve a far vedere le due prospettive del dinosauro
 	\param int diY: Posizione sull asse y
 	\param int diX: Posizione sull asse x
-	\return void: La funzione continua in loop facendo sembrare che il dinosauro si muova
+	\return void: La funzione continua in loop facendo sembrare che il dinosauro si muova (no return)
 */
 
 void showdinosaur(int diY, int diX) {
@@ -104,7 +112,7 @@ int computePrize(int score, int usedPrize) {
 	\brief Questa funzione serve per far funzionare il gioco
 	\param int highScore: Punteggio massimo raggiunto dall'utente
 	\param struct user firstUser: Dati inseriti dall'utente nel menu
-	\return void: Esegue il programma in loop fino a quando la funzione "checkGame" non restituisce 0
+	\return void: Esegue il programma in loop fino a quando la funzione "checkGame" non restituisce 0 (no return)
 */
 
 void startEngine(int highScore, struct user firstUser) {
@@ -265,6 +273,8 @@ void all_tests() {
 /**
 	\fn int run_all_tests(int argc, char **argv)
 	\brief Questa funzione serve per far eseguire dei test
+	\param int argc: Numero di stringhe
+	\param char **argv: array di stringhe
 	\return int: Restituisce il valore di test eseguiti ed il valore dei test passati
 */
 
