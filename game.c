@@ -3,7 +3,7 @@
 	\file game.c
 	\author Farbod Ahmadian
 	\version 1.0
-	\date 2023-02-31
+	\date 2023-01-31
 */
 
 #include <ncurses.h>
