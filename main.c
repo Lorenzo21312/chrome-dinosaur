@@ -12,13 +12,12 @@
 
 /**
 	\fn int main(int argc, char **argv)
-	\brief Funzione principale del programma
-	Questa funzione gestisce l'avvio del programma e la sua modalità di esecuzione
+	\brief Funzione principale del programma Questa funzione gestisce l'avvio del programma e la sua modalità di esecuzione
 	Se viene specificato il comando '-test', verranno eseguiti tutti i test del programma 		
 	utilizzando la libreria minunit.h
 	Altrimenti verrà avviato il menu principale del gioco usando la libreria ncurses
-	\param argc Numero di argomenti passati al programma
-	\param argv Array di argomenti pasati al programma
+	\param int argc: Numero di argomenti passati al programma
+	\param int **argv: Array di argomenti pasati al programma
 	\return int: Fa tornare o 1 se il gioco non è terminato oppure 0 se il gioco è terminato
 */
 
