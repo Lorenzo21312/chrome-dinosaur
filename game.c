@@ -1,9 +1,9 @@
 
 /** 
 	\file game.c
-	\author Farbod Ahmadian
+	\author Lorenzo Boggiatto
 	\version 1.0
-	\date 2023-01-31
+	\date 2023-01-29
 */
 
 #include <ncurses.h>
