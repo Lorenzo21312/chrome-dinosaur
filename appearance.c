@@ -201,7 +201,6 @@ mvprintw(y, 0, "    ");
 \param int x: posizione sull'asse x  degli spazi da stampare per cancellare il dinosauro
 \return void: cancella il dinosauro (no return)
 */
- 
 
 void cleardinosaurDown(int diY, int diX) {
 mvprintw(diY+3, diX+10, "              ");
