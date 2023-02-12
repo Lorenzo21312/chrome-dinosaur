@@ -283,7 +283,7 @@ static char * test_foo() {
     mu_assert("error, foo != 7", foo == 7);
 }
 
-// sample test function 2
+// sample random test
 
 /**
 	\fn static char * test_bar()
