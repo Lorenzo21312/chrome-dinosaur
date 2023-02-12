@@ -222,6 +222,7 @@ void startEngine(int highScore, struct user firstUser) {
 }
 
 
+
 //
 // START of tests section
 //
@@ -234,7 +235,44 @@ int bar = 5;
 int tests_run = 0;
 int tests_passed = 0;
 
-// sample test function 1
+
+
+// sample test function checkGame
+
+void test_fake() {
+	int oracolo = 2;
+	mu_assert("ERRORE, 1+1 non fa 2!", 2 == oracolo);
+}
+
+
+
+
+
+
+// sample test function computeTime
+
+void test_fake2() {
+	int oracolo = 3;
+	mu_assert("ERRORE, 1+1 non fa 2!", 3 == oracolo);
+}
+
+
+
+
+
+
+// sample test function computePrize
+
+void test_fake3() {
+	int oracolo = 4;
+	mu_assert("ERRORE, 1+1 non fa 2!", 4 == oracolo);
+}
+
+
+
+
+
+// sample random test 
 
 /**
 	\fn static char * test_foo()
@@ -256,6 +294,10 @@ static char * test_bar() {
     mu_assert("error, bar != 5", bar == 5);
 }
 
+
+
+
+
 // put all tests here
 
 /**
@@ -266,6 +308,9 @@ static char * test_bar() {
 void all_tests() {
 	mu_run_test(test_foo);
 	mu_run_test(test_bar);
+	mu_run_test(test_fake);
+	mu_run_test(test_fake2);
+	mu_run_test(test_fake3);
 }
 
 // call this to run all tests
