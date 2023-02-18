@@ -239,13 +239,22 @@ int tests_passed = 0;
 
 // sample test function checkGame
 
-void test_fake() {
-	int oracolo = 2;
-	mu_assert("ERRORE, 1+1 non fa 2!", 2 == oracolo);
+void test_checkGame() {
+
+	int oracolo = 0;
+	mu_assert("ERRORE: Non ritorna 0 (Test 1)", checkGame(3,17,3,5) == oracolo);
+	mu_assert("ERRORE: Non ritorna 0 (Test 2)", checkGame(0,14,0,4) == oracolo);
+	mu_assert("ERRORE: Non ritorna 0 (Test 3)", checkGame(-10,11,-10,0) == oracolo);
+	mu_assert("ERRORE: Non ritorna 0 (Test 4)", checkGame(11,0,11,-14) == oracolo);
+	mu_assert("ERRORE: Non ritorna 0 (Test 5)", checkGame(8,20,8,7) == oracolo);
+	
+	oracolo = 1;
+	mu_assert("ERRORE: Non ritorna 1 (Test 6)", checkGame(9,3,9,11) == oracolo);
+	mu_assert("ERRORE: Non ritorna 1 (Test 7)", checkGame(1,35,1,4) == oracolo);
+	mu_assert("ERRORE: Non ritorna 1 (Test 8)", checkGame(5,17,7,3) == oracolo);
+	mu_assert("ERRORE: Non ritorna 1 (Test 9)", checkGame(-3,14,3,0) == oracolo);
+	mu_assert("ERRORE: Non ritorna 1 (Test 10)", checkGame(12,14,2,1) == oracolo);
 }
-
-
-
 
 
 
@@ -263,12 +272,22 @@ void test_fake2() {
 
 // sample test function computePrize
 
-void test_fake3() {
-	int oracolo = 4;
-	mu_assert("ERRORE, 1+1 non fa 2!", 4 == oracolo);
+void test_computePrize() {
+
+	int oracolo = 0;
+	mu_assert("ERRORE: Non ritorna 0 (Test 1)", computePrize(23,1) == oracolo);
+	mu_assert("ERRORE: Non ritorna 0 (Test 2)", computePrize(63,2) == oracolo);
+	mu_assert("ERRORE: Non ritorna 0 (Test 3)", computePrize(101,4) == oracolo);
+	mu_assert("ERRORE: Non ritorna 0 (Test 4)", computePrize(200,1) == oracolo);
+	mu_assert("ERRORE: Non ritorna 0 (Test 5)", computePrize(10,1) == oracolo);
+	
+	oracolo = 1;
+	mu_assert("ERRORE: Non ritorna 1 (Test 6)", computePrize(24,0) == oracolo);
+	mu_assert("ERRORE: Non ritorna 1 (Test 7)", computePrize(61,1) == oracolo);
+	mu_assert("ERRORE: Non ritorna 1 (Test 8)", computePrize(104,1) == oracolo);
+	mu_assert("ERRORE: Non ritorna 1 (Test 9)", computePrize(20,0) == oracolo);
+	mu_assert("ERRORE: Non deve ritornare 1 (Test 10)", computePrize(63,3) != oracolo);
 }
-
-
 
 
 
@@ -282,6 +301,8 @@ void test_fake3() {
 static char * test_foo() {
     mu_assert("error, foo != 7", foo == 7);
 }
+
+
 
 // sample random test
 
@@ -308,9 +329,9 @@ static char * test_bar() {
 void all_tests() {
 	mu_run_test(test_foo);
 	mu_run_test(test_bar);
-	mu_run_test(test_fake);
+	mu_run_test(test_checkGame);
 	mu_run_test(test_fake2);
-	mu_run_test(test_fake3);
+	mu_run_test(test_computePrize);
 }
 
 // call this to run all tests
